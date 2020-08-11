@@ -544,7 +544,7 @@ class ReplayBuffer(object):
 
   def sample_position(self, game) -> int:
     # Sample position from game either uniformly or according to some priority.
-    return numpy.random.choice(game.history)
+    return numpy.random.choice(len(game.history))
 
 # Nets
 class NetworkOutput(typing.NamedTuple):
